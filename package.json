@@ -1,0 +1,44 @@
+{
+  "name": "pi-zellij-tab-status",
+  "version": "0.1.0",
+  "description": "Pi extension that updates the current Zellij tab name with working, waiting, and done status icons.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bryan Petzinger",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bp2070/pi-zellij-tab-status.git"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "zellij"
+  ],
+  "files": [
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "echo 'nothing to build'",
+    "check": "echo 'nothing to check'",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm run pack:check",
+    "release:help": "node -e \"const pkg=require('./package.json'); console.log('Release steps: npm version <patch|minor|major>, git push origin main --follow-tags'); console.log('Next tag: v'+pkg.version);\""
+  }
+}
