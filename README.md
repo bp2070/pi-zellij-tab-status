@@ -25,7 +25,7 @@ Or, after publishing, install it from npm or git:
 ```bash
 pi install npm:pi-zellij-tab-status
 # or
-pi install git:github.com/<you>/pi-zellij-tab-status
+pi install git:github.com/bp2070/pi-zellij-tab-status
 ```
 
 Or copy it into your normal pi extensions directory:
